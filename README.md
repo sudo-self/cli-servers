@@ -2,12 +2,9 @@
 
 This project provides a handy guide to run various command-line servers for development and testing purposes. Each command is easily accessible through a simple, user-friendly HTML interface.
 
-## Table of Contents
+## Running the Servers
 
-1. [Installation Instructions](#installation-instructions)
-2. [Running the Servers](#running-the-servers)
-3. [Copying Commands](#copying-commands)
-4. [Customization](#customization)
+visit <a href="https://sudo-self.github.io/cli-servers/">Server Start Commands</a>&nbsp;to copy the startup command.
 
 ---
 
@@ -22,6 +19,6 @@ To use the commands, ensure the following tools and environments are installed o
 - **Ruby** for `httpd`.
 - **Deno** for the Deno file server.
 - **Static Site Generators** like Hugo, Jekyll, Gatsby, or Eleventy, depending on your project requirements.
-- 
-visit <a href="https://sudo-self.github.io/cli-servers/">Server Start Commands</a>&nbsp;to copy the startup command.
+ <hr>
+
 
