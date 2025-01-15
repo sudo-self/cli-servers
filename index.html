@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Command Line Servers</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <div class="container mx-auto p-5">
+    <h1 class="text-3xl text-center font-bold mb-5">Command Line Servers</h1>
+    <div class="space-y-4">
+      <!-- Command blocks -->
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>python3 -m http.server</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="python3 -m http.server">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>npx vite</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="npx vite">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>npm run dev</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="npm run dev">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>php -S localhost:8000</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="php -S localhost:8000">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>serve -dir /path</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="serve -dir /path">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>http-server</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="http-server">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>ruby -run -e httpd . -p 8000</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="ruby -run -e httpd . -p 8000">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>python -m SimpleHTTPServer 8000</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="python -m SimpleHTTPServer 8000">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>live-server</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="live-server">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>npx parcel index.html</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="npx parcel index.html">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>deno run --allow-net --allow-read https://deno.land/std/http/file_server.ts</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="deno run --allow-net --allow-read https://deno.land/std/http/file_server.ts">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>hugo server</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="hugo server">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>bundle exec jekyll serve</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="bundle exec jekyll serve">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>gatsby develop</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="gatsby develop">
+          Copy
+        </button>
+      </div>
+      <div class="bg-gray-800 p-4 rounded shadow-md relative">
+        <pre><code>npx @11ty/eleventy --serve</code></pre>
+        <button class="absolute top-2 right-2 bg-blue-500 text-white px-3 py-1 rounded text-sm copy-btn" data-command="npx @11ty/eleventy --serve">
+          Copy
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Add event listeners for all copy buttons
+    document.querySelectorAll('.copy-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const command = button.getAttribute('data-command');
+        navigator.clipboard.writeText(command)
+          .then(() => {
+            button.textContent = 'Copied!';
+            setTimeout(() => (button.textContent = 'Copy'), 2000);
+          })
+          .catch(() => {
+            button.textContent = 'Error!';
+            setTimeout(() => (button.textContent = 'Copy'), 2000);
+          });
+      });
+    });
+  </script>
+</body>
+</html>
