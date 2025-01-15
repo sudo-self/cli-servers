@@ -4,10 +4,9 @@ This project provides a handy guide to run various command-line servers for deve
 
 ## Running the Servers
 
-visit <a href="https://sudo-self.github.io/cli-servers/">Server Start Commands</a>&nbsp;to copy the startup command.
+<a href="https://sudo-self.github.io/cli-servers/">Server Start Commands</a>
 
 ---
-
 ## Installation Instructions
 
 ### Prerequisites
